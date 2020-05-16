@@ -34,10 +34,10 @@
             </plugin>
             <plugin>
                     <groupId>org.apache.tomcat.maven</groupId>
-                    <artifactId>tomcat7-maven-plugin</artifactId>
+                    <artifactId>tomcat8-maven-plugin</artifactId>
                     <version>2.2</version>
                     <configuration>
-                        <url>http://localhost:8083/manager/html</url>
+                        <url>http://localhost:9090/manager/html</url>
                         <server>TomcatServer</server>
                         <path>/yourappcontextpath</path>
                     </configuration>
