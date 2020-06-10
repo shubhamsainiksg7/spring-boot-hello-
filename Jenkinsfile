@@ -1,28 +1,26 @@
 pipeline{
 	agent any
-
+	
+	environment{
+		PATH = "/home/dz-jp-11/Desktop/apache-maven-3.6.0-bin/apache-maven-3.6.0"
+	}
+	
 	stages {
 		stage('Compile stage') {
 			steps {
-				withMaven(maven : 'maven_3_5_0') {
-					sh 'mvn clean compile'
-				}
+				sh 'mvn clean compile'	
 			}
 		}
 
 		stage('Testing stage') {
 			steps {
-				withMaven(maven : 'maven_3_5_0') {
 					sh 'mvn test'
-				}
 			}
 		}
 
 		stage('Deployment stage') {
 			steps {
-				withMaven(maven : 'maven_3_5_0') {
-					sh 'mvn deploy'
-				}
+				sh 'mvn deploy'
 			}
 		}
 	}
