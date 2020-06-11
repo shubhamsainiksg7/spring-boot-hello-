@@ -10,9 +10,7 @@ pipeline{
 				git url:'https://github.com/shubhamsainiksg7/spring-boot-hello-.git'
 			}
 		}
-	}
 	
-	stages {
 		stage("Maven Build") {
 			steps {
 				sh 'mvn clean install'
