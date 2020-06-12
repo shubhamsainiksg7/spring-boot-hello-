@@ -16,6 +16,11 @@ pipeline{
 				sh 'mvn clean install'
 			}
 		}
+		stage("pwd") {
+			steps {
+				sh 'pwd'
+			}
+		}
 	}
 }
 
