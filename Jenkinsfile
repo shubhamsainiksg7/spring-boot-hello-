@@ -18,7 +18,7 @@ pipeline{
 		}
 		stage("deploye") {
 			steps {
-				sh 'cp /var/lib/jenkins/workspace/pipeline-jenkins-example /home/dz-jp-11/Documents/Tomcat/apache-tomcat-8.5.20/webapps/pipeline-jenkins-example'
+				sh 'cp /var/lib/jenkins/workspace/pipeline-jenkins-example /var/lib/jenkins/workspace/Tomcat/apache-tomcat-8.5.20/webapps/pipeline-jenkins-example'
 			}
 		}
 	}
